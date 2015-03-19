@@ -1,0 +1,22 @@
+ethernet_client is an application in which communication between client and server happens through a socket.
+
+Hardware setup:
+Connect ethernet cable to the carrier board on which module is placed.
+
+Compiling the application:
+In the application directory, run make command preceding machine(module) name.
+e.g: MACHINE=colibri-t20 make
+Copy the exe to the module either through ethernet and USB.
+Ethernet:
+scp ethernet_client root@10.18.0.162:/home/root
+USB:
+cp ethernet_client /media/USB
+
+Run the application:
+Run the application followed by server ip address.
+e.g: ./ethernet_client 10.18.0.162
+open serial terminal (hercules) on your server PC and choose TCP server and give the port number as mentioned in the application and 
+click on Listen button.
+
+Output:
+Output will ask to enter a message which will be displayed at the server side and vice versa.
